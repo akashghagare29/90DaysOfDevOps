@@ -1,36 +1,50 @@
 # 🐧 Day 05 – Linux Troubleshooting Drill: CPU, Memory, and Logs
 
-Practiced inspecting **processes, services, and logs** using common Linux commands and service inspected: **ssh**
+Practiced inspecting **CPU, memory, and logs** using common Linux commands and service inspected: **ssh**
 
 ---
 
-## 🔄 Process Checks
+### Environment commands
 
 ```bash
-ps aux | head -5 - Check running processes
+uname - Print system information
+lsb_release - Print distribution-specific information
 ```
+
+### File info commands
 
 ```bash
-pgrep -u root sshd - Look up or signal processes based on name and other attributes
+mkdir - To create a directory
+pwd - Present work directory
+cp - Copy 
+mv - Move
+rm - Remove
+cd - Change directory
+ls - List all files/directory
+cat - Concatenate files and print on the standard output
 ```
 
-```bash 
-top -b -n 1 | head -10 - Real-time process monitoring (batch mode)
-
-htop - Real-time process monitoring (batch mode)
-```
-
-## 🔧 Check ssh service status
+### Disk / IOCPU / Memory commands
 
 ```bash
-systemctl status <service_name> 
+df -h - Report file system disk space usage
+du -sh * - Estimate file space usage
+ps - Report a snapshot of the current processes.
+top/htop - Display Linux processes
+free -m - Display amount of free and used memory in the system
 ```
 
-## 📜 Log Checks
+### Network commands
 
 ```bash
-tail -n 20 /var/log/auth.log - View last 20 lines of authentication log
+curl - Transfer a URL
+ping - Send ICMP ECHO_REQUEST to network hosts
+nslookup - Query Internet name servers interactively
+traceroute - Print the route packets trace to network host
 ```
-```bash
-head -n 20 /var/log/auth.log - View first 20 lines of authentication log
-```
+
+### 🚨 If This Worsens (Next Steps)
+
+- Restart ssh safely
+- Increase log verbosity for ssh and recheck logs
+- Collect deeper diagnostics (`strace`, `tcpdump`) for connection issues
