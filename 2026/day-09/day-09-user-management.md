@@ -23,11 +23,25 @@ drwxrwxr-x  2 ubuntu project-team 4096 Feb  9 14:22 team-workspace
 ## Commands Used
 ```bash
 useradd: To add new users
+sudo useradd -m username
+
 groupadd: To create new groups
+sudo groupadd groupname
+
+passwd: To update password
+sudo passwd username
+
 usermod: To modify user group memberships
+usermod -aG groupname username
+
 mkdir: To create directories
+sudo mkdir /path/to/directory
+
 chown: To change directory ownership
+sudo chown user:group /path/to/directory
+
 chmod: To set directory permissions
+sudo chmod 775 /path/to/directory
 ```
 
 ## What I Learned
