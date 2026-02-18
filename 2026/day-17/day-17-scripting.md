@@ -89,8 +89,8 @@ echo "Hello, $1!"
 
 Output:
 ```bash
-./greet.sh Akash
-# Hello, Akash!
+./greet.sh Akash Ghagare
+# Hello, Akash Ghagare!
 
 ./greet.sh
 # Usage: ./greet.sh <name>
